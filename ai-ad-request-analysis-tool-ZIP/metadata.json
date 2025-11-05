@@ -1,0 +1,5 @@
+
+{
+  "name": "AI Ad Request Analysis Tool",
+  "description": "An AI-powered tool to analyze ad requests, identify missing bid parameters, and forecast potential revenue uplift. It supports single publisher analysis, top vs. low performer comparison, and multi-publisher comparison."
+}
