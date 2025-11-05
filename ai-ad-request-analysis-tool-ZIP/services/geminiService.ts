@@ -4,7 +4,7 @@ import { AnalysisOption, KpiSet, AnalysisResultData } from '../types';
 import { SINGLE_ANALYSIS_SCHEMA, COMPARISON_ANALYSIS_SCHEMA } from '../constants';
 
 // FIX: Initialize GoogleGenAI with API Key from environment variables.
-const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+const ai = new GoogleGenAI({ apiKey: import.meta.env.VITE_GOOGLE_API_KEY });
 
 const SYSTEM_INSTRUCTION = `You are a world-class expert in digital advertising technology (AdTech), specializing in ad request optimization for publishers.
 Your task is to analyze ad request data and provide actionable insights to maximize revenue.
