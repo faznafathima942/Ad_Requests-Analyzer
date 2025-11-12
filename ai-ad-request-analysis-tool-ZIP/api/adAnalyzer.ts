@@ -171,7 +171,7 @@ export default async function handler(
     try {
         const prompt = buildPrompt(option, kpiSets, adRequestInputs);
         const schema = getResponseSchema(option);
-        const model = 'gemini-1.5-pro-latest'; // Using 1.5 Pro for this complex task
+        const model = 'gemini-pro'; // Using Pro for this complex task
 
         const response = await ai.models.generateContent({
             model,
@@ -199,4 +199,5 @@ export default async function handler(
     }
 
 }
+
 
