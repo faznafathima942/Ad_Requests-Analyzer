@@ -2,7 +2,7 @@
 // It runs on Vercel's servers, not in the user's browser.
 import type { VercelRequest, VercelResponse } from '@vercel/node';
 import { GoogleGenAI, Type } from "@google/genai";
-import { AnalysisOption, KpiSet, AnalysisResultData } from '../types';
+import { AnalysisOption, KpiSet, AnalysisResultData } from '../types.js';
 import { SINGLE_ANALYSIS_SCHEMA, COMPARISON_ANALYSIS_SCHEMA } from '../constants';
 
 // --- 1. YOUR PARAMETER LIST IS NOW HERE ---
@@ -197,4 +197,5 @@ export default async function handler(
             details: e.message 
         });
     }
+
 }
