@@ -1,5 +1,3 @@
-// This file is now much simpler!
-// It just calls your new secure backend API.
 import { AnalysisOption, KpiSet, AnalysisResultData } from '../types';
 
 export async function analyzeAdRequests(
@@ -8,8 +6,8 @@ export async function analyzeAdRequests(
   adRequestInputs: string[]
 ): Promise<AnalysisResultData> {
   
-  // Call your backend API at '/api/analyze'
-  const response = await fetch('/api/analyze', {
+  // This calls your new backend file at /api/adAnalyzer.ts
+  const response = await fetch('/api/adAnalyzer', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
