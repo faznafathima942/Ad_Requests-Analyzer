@@ -1,4 +1,3 @@
-// FIX: Add response schemas for Gemini API
 import { Type } from '@google/genai';
 
 export const SINGLE_ANALYSIS_SCHEMA = {
@@ -35,8 +34,19 @@ export const SINGLE_ANALYSIS_SCHEMA = {
         required: ['parameter', 'description', 'priority'],
       },
     },
+    // --- START: ADD THESE TWO NEW PROPERTIES ---
+    tmax: {
+      type: Type.STRING,
+      description: 'The tmax (timeout) value found in the request. e.g., "4968ms" or "Not Found".'
+    },
+    schain: {
+        type: Type.STRING,
+        description: 'Analysis of the source.ext.schain object. e.g., "Found with 3 hops" or "Not Found".'
+    }
+    // --- END: ADD THESE TWO NEW PROPERTIES ---
   },
-  required: ['summary', 'forecastedRevenue', 'missingParameters'],
+  // --- UPDATE THIS REQUIRED LIST ---
+  required: ['summary', 'forecastedRevenue', 'missingParameters', 'tmax', 'schain'],
 };
 
 export const COMPARISON_ANALYSIS_SCHEMA = {
