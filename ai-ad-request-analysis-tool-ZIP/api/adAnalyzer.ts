@@ -3,7 +3,7 @@
 import type { VercelRequest, VercelResponse } from '@vercel/node';
 import { GoogleGenAI, Type } from "@google/genai";
 import { AnalysisOption, KpiSet, AnalysisResultData } from '../types.js';
-import { SINGLE_ANALYSIS_SCHEMA, COMPARISON_ANALYSIS_SCHEMA } from '../constants';
+import { SINGLE_ANALYSIS_SCHEMA, COMPARISON_ANALYSIS_SCHEMA } from '../constants.js';
 
 // --- 1. YOUR PARAMETER LIST IS NOW HERE ---
 // I have copied this from the "Important Parameters.txt" file you uploaded.
@@ -199,3 +199,4 @@ export default async function handler(
     }
 
 }
+
