@@ -1,7 +1,7 @@
 {
   "functions": {
     "api/adAnalyzer.ts": {
-      "maxDuration": 45
+      "maxDuration": 90
     }
   }
 }
