@@ -21,6 +21,8 @@ export interface SingleAnalysis {
   summary: string;
   forecastedRevenue: number;
   missingParameters: MissingParameter[];
+  tmax: string;    
+  schain: string;  
 }
 
 export interface ComparisonAnalysis {
